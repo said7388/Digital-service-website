@@ -1,0 +1,23 @@
+.header {
+  height: 70px;
+  padding: 8px;
+  margin: 0;
+  background-color: #F2F8FB;
+}
+
+.nav-bar {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.btn-regular {
+  background-color: #02897a;
+  color: #ffffff;
+  padding: 7px 15px;
+}
+
+.bg-navbar {
+  padding-left: 12px;
+  background-color: #F2F8FB;
+}

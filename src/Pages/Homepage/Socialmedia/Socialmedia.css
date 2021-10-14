@@ -1,0 +1,11 @@
+.social-media-container{
+    align-items: center;
+}
+.social-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.social-text {
+    font-size: 18px;
+}

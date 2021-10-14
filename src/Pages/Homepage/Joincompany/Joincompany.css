@@ -1,0 +1,23 @@
+.joincompany {
+  background-color: #02897a;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.join-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+}
+.join-btn {
+    background-color: white;
+    font-size: 20px;
+    font-weight: 600;
+    color: #02897a;
+}
+@media only screen and (min-width: 768px) {
+  .joincompany {
+    width: 80%;
+  }
+}

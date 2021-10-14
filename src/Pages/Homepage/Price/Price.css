@@ -1,0 +1,15 @@
+.price {
+  font-size: 76px;
+  font-weight: 700;
+  color: #02897a;
+}
+.price-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+}
+.price-standard {
+    background-color: #02897a;
+    color: white;
+}
