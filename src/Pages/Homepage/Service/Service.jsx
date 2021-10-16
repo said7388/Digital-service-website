@@ -1,8 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 import "./Service.css";
 
 function Service() {
+  const { user } = useAuth();
   return (
     <div className='my-md-5 my-4 py-md-5 service-container'>
       <Container>
@@ -56,7 +59,15 @@ function Service() {
           </Col>
         </Row>
         <div className='text-center'>
-          <button className='btn btn-regular'>SIGN UP NOW</button>
+          {!user.email ? (
+            <Link to='/login' className='text-center'>
+              <button className='btn btn-regular'>SIGN UP NOW</button>
+            </Link>
+          ) : (
+            <Link to='/' className='text-center'>
+              <button className='btn btn-regular'>EXPLORE NOW</button>
+            </Link>
+          )}
         </div>
       </Container>
     </div>

@@ -1,7 +1,9 @@
 import React from "react";
+import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
+  const { SigninWithGoogle } = useAuth();
   return (
     <div>
       <div className='container'>
@@ -20,7 +22,7 @@ const Login = () => {
                       id='floatingInput'
                       placeholder='name@example.com'
                     />
-                    <label for='floatingInput'>Email address</label>
+                    <label htmlFor='floatingInput'>Email address</label>
                   </div>
                   <div className='form-floating mb-3'>
                     <input
@@ -29,7 +31,7 @@ const Login = () => {
                       id='floatingPassword'
                       placeholder='Password'
                     />
-                    <label for='floatingPassword'>Password</label>
+                    <label htmlFor='floatingPassword'>Password</label>
                   </div>
 
                   <div className='form-check mb-3'>
@@ -41,7 +43,7 @@ const Login = () => {
                     />
                     <label
                       className='form-check-label'
-                      for='rememberPasswordCheck'>
+                      htmlFor='rememberPasswordCheck'>
                       Remember password
                     </label>
                   </div>
@@ -52,23 +54,23 @@ const Login = () => {
                       Sign in
                     </button>
                   </div>
-                  <hr className='my-4' />
-                  <div className='d-grid mb-2'>
-                    <button
-                      className='btn btn-google btn-login text-uppercase fw-bold'
-                      type='submit'>
-                      <i className='fab fa-google me-2'></i> Sign in with Google
-                    </button>
-                  </div>
-                  <div className='d-grid'>
-                    <button
-                      className='btn btn-facebook btn-login text-uppercase fw-bold'
-                      type='submit'>
-                      <i className='fab fa-facebook-f me-2'></i> Sign in with
-                      Facebook
-                    </button>
-                  </div>
                 </form>
+                <hr className='my-4' />
+                <div className='d-grid mb-2'>
+                  <button onClick={SigninWithGoogle}
+                    className='btn btn-google btn-login text-uppercase fw-bold'
+                    type='submit'>
+                    <i className='fab fa-google me-2'></i> Sign in with Google
+                  </button>
+                </div>
+                <div className='d-grid'>
+                  <button
+                    className='btn btn-facebook btn-login text-uppercase fw-bold'
+                    type='submit'>
+                    <i className='fab fa-facebook-f me-2'></i> Sign in with
+                    Facebook
+                  </button>
+                </div>
               </div>
             </div>
           </div>

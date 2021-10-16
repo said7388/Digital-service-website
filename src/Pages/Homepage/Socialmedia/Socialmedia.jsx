@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Socialmedia.css";
 
 function Socialmedia() {
@@ -14,13 +15,15 @@ function Socialmedia() {
               alt=''
             />
           </Col>
-          <Col sm={12} md={6} className="mt-md-5">
+          <Col sm={12} md={6} className='mt-md-5'>
             <p className='social-title mt-md-4'>Work at the speed of thought</p>
             <p className='social-text mt-md-4'>
               Tools, tutorials, design and innovation experts, all in one place!
               The most intuitive way to imagine your next user experience.
             </p>
-            <button className='btn btn-regular mt-md-5'>Start Now</button>
+            <Link to='/pricing'>
+              <button className='btn btn-regular mt-md-5'>Start Now</button>
+            </Link>
           </Col>
         </Row>
       </Container>
