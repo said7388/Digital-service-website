@@ -6,9 +6,11 @@ import Header from './Pages/Header/Header';
 import Footer from './Pages/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute';
 import Registration from './Pages/Registration/Registration';
 import Pricing from './Pages/Pricing/Pricing';
 import AuthProvider from './AuthContext/AuthProvider';
+import Customers from './Pages/Customers/Customers';
 
 function App() {
   return (
@@ -26,12 +28,15 @@ function App() {
             <Route exact path="/login">
               <Login></Login>
             </Route>
+            <Route exact path="/customers">
+              <Customers></Customers>
+            </Route>
             <Route exact path="/signup">
               <Registration></Registration>
             </Route>
-            <Route exact path="/pricing">
+            <PrivateRoute exact path="/pricing">
               <Pricing></Pricing>
-            </Route>
+            </PrivateRoute>
             <Route path="/*">
               <NotFound />
             </Route>

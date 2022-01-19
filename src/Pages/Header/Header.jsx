@@ -6,7 +6,6 @@ import "./Header.css";
 
 const Header = () => {
   const { user, LogOut } = useAuth();
-  console.log(user);
   return (
     <div className='header'>
       <Navbar collapseOnSelect expand='lg' variant='light'>
@@ -25,7 +24,7 @@ const Header = () => {
                 Products
               </Nav.Link>
 
-              <Nav.Link as={Link} to='/'>
+              <Nav.Link as={Link} to='/customers'>
                 Customer
               </Nav.Link>
 
@@ -43,13 +42,11 @@ const Header = () => {
                 </Nav.Link>
               ) : (
                 <NavDropdown
-                  eventKey={1}
                   title={
                     <img
                       className='profile-img'
                       src={user.photoURL}
                       alt='user pic'
-                      onError="this.onError=null; this.src='https://www.linkpicture.com/q/41-410093_circled-user-icon-user-profile-icon-png.png'"
                     />
                   }
                   id='basic-nav-dropdown'>

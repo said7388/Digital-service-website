@@ -18,10 +18,8 @@ const PrivateRoute = ({ children, ...rest }) => {
                     state: { from: location }
                 }}
             ></Redirect>
-
             }
         >
-
         </Route>
     );
 };

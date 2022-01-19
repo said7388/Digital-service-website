@@ -1,9 +1,22 @@
 import React from "react";
+import { useHistory, useLocation } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
-  const { SigninWithGoogle } = useAuth();
+  const { SignInWithGoogle, setIsLoading } = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
+
+  const handleGoogleLogin = () => {
+    SignInWithGoogle().then((result) => {
+      history.push(redirect_uri);
+    })
+    .finally(() => {
+      setIsLoading(false);
+  })
+  };
   return (
     <div>
       <div className='container'>
@@ -57,7 +70,8 @@ const Login = () => {
                 </form>
                 <hr className='my-4' />
                 <div className='d-grid mb-2'>
-                  <button onClick={SigninWithGoogle}
+                  <button
+                    onClick={handleGoogleLogin}
                     className='btn btn-google btn-login text-uppercase fw-bold'
                     type='submit'>
                     <i className='fab fa-google me-2'></i> Sign in with Google

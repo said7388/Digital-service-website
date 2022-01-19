@@ -11,7 +11,7 @@ function Contents() {
           We focus on ergonomics and meeting you where you work. It's only a
           keystroke away.{" "}
         </p>
-        <Row className="g-3">
+        <Row className='g-3'>
           <Col sm={12} md={4}>
             <Card>
               <Card.Img
@@ -32,7 +32,7 @@ function Contents() {
             <Card>
               <Card.Img
                 variant='top'
-                src='https://www.linkpicture.com/q/image3.png'
+                src='https://i.ibb.co/qMCC1f7/image.png'
               />
               <Card.Body>
                 <p>
@@ -48,7 +48,7 @@ function Contents() {
             <Card>
               <Card.Img
                 variant='top'
-                src='https://www.linkpicture.com/q/image2_2.png'
+                src='https://i.ibb.co/rmjH0C7/image-1.png'
               />
               <Card.Body>
                 <p>

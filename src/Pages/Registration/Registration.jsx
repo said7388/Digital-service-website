@@ -3,7 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Registration.css";
 
 const Registration = () => {
-  const {SigninWithGoogle, user} = useAuth();
+  const {SignInWithGoogle, user} = useAuth();
 
   return (
     <div className='col-md-4 col-md-offset-4 mx-auto' id='login'>
@@ -73,7 +73,7 @@ const Registration = () => {
           <hr className='my-4' />
           <div className='d-grid mb-2'>
             <button
-              onClick={SigninWithGoogle}
+              onClick={SignInWithGoogle}
               className='btn btn-google btn-login text-uppercase fw-bold'
               type='submit'>
               <i className='fab fa-google me-2'></i> Sign up with Google

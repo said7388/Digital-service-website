@@ -1,4 +1,5 @@
 import React from "react";
+import Customers from "../../Customers/Customers";
 import Collaborative from "../Collaborative/Collaborative";
 import Contents from "../Contents/Contents";
 import CustomerSupport from "../CustomerSupport/CustomerSupport";
@@ -12,7 +13,7 @@ import Testimonial from "../Testimonial/Testimonial";
 
 function Home() {
   return (
-    <div >
+    <div>
       <Socialmedia></Socialmedia>
       <Service></Service>
       <Managment></Managment>
@@ -21,6 +22,7 @@ function Home() {
       <Experts></Experts>
       <Contents></Contents>
       <Price></Price>
+      <Customers />
       <Testimonial></Testimonial>
       <Joincompany></Joincompany>
     </div>
